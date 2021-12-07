@@ -1,3 +1,6 @@
+from django.http.response import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
+
+def todo_list(request):
+    return render(request, "todo_list2.html")
