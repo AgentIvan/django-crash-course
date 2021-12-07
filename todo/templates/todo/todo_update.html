@@ -7,14 +7,11 @@
   <title>Django Crash Course</title>
 </head>
 <body>
-  {% if request.user.is_authorized %}
-    Hello {{ request.user.username }}
-  {% else %}
-    Hello anonymous user
-  {% endif %}
-  The todo name is: {{ todo.name}}
-  The due date is: {{ todo.due_date}}
-
-  <a href="/{{ todo.id }}/update">Update this todo</a>
+  <h4>Update todo</h4>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>
