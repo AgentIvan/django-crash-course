@@ -12,10 +12,7 @@
   {% else %}
     Hello anonymous user
   {% endif %}
-  <ul>
-  {% for todo in todo_list %}
-    <li><a href="/{{todo.id}}">{{todo.name}}</a>, it's due {{todo.due_date}} </li>
-  {% endfor %}
-</ul>
+  The todo name is: {{ todo.name}}
+  The due date is: {{ todo.due_date}}
 </body>
 </html>
